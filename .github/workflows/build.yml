@@ -1,4 +1,4 @@
-name: .NET Core
+name: Build
 
 on: [push]
 
@@ -9,5 +9,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Install components
-      run: npm install tfx-cli
+    - run: npm install tfx-cli
+    - run: tfx extension create --manifest-globs vss-extension.json
