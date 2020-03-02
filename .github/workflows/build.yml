@@ -11,6 +11,6 @@ jobs:
     - uses: actions/checkout@v2
     - run: npm install tfx-cli
     - run: npx tfx extension create --manifest-globs extension-manifest.json
-    - run: npx tfx extension publish --auth-type pat --token $AZURE_MARKETPLACE_PUBLISH_PAT
+    - run: npx tfx extension publish --auth-type pat --token $AZURE_MARKETPLACE_PUBLISH_PAT -manifest-globs extension-manifest.json
       env:
         AZURE_MARKETPLACE_PUBLISH_PAT:  ${{ secrets.AZURE_MARKETPLACE_PUBLISH_PAT }}
