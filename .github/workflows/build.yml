@@ -10,4 +10,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: npm install tfx-cli
-    - run: npm tfx extension create --manifest-globs vss-extension.json
+    - run: npx tfx extension create --manifest-globs vss-extension.json
